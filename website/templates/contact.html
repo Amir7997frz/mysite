@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | StarSite</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">⭐ StarSite</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </header>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        {% if success %}
+        <p style="color:limegreen; margin-top: 1rem;">Message sent successfully!</p>
+        {% endif %}
+    </section>
+
+    <footer>
+        <p>&copy; 2025 StarSite. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StarSite</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">⭐ StarSite</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        </nav>
+        <section class="hero" id="home">
+            <div class="hero-text">
+                <h1>Shine Online with StarSite</h1>
+                <p>Your brand deserves brilliance</p>
+                <a href="/contact" class="btn">Get Started</a>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section id="services" class="services">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <h3>Web Design</h3>
+                    <p>Modern, responsive websites that wow visitors.</p>
+                </div>
+                <div class="card">
+                    <h3>SEO</h3>
+                    <p>Boost your visibility and dominate search results.</p>
+                </div>
+                <div class="card">
+                    <h3>Maintenance</h3>
+                    <p>Reliable updates and support for your online presence.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 StarSite. All rights reserved.</p>
+    </footer>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+
+</html>

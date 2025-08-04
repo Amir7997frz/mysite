@@ -1,11 +1,12 @@
+from django.shortcuts import render
 from django.http import HttpResponse 
 
 
 def index(request):
-    return HttpResponse('<h1> خانه</h1>')
+    return render(request,'index.html')
 
 def about(request):
-    return HttpResponse('<h1>درباره ما</h1>')
+    return render(request, 'about.html')
 
 def contact(request):
-    return HttpResponse('<h1>ارتباط با ما</h1>')
+    return render(request, 'contact.html')
